@@ -7,4 +7,10 @@ cargo build --release --verbose
 ln -sf /git/SubstratumNode/node/target/release/node /node/node
 chmod -R 777 /node
 export RUST_BACKTRACE=1
-/node/node --dns_servers 1.1.1.1
+screen -A -m -d -S substratum-node /node/node --dns_servers 1.1.1.1
+while [ ! -f /tmp/node.log ] ;
+do
+      sleep 1
+done
+sleep 5
+tail -f /tmp/node.log

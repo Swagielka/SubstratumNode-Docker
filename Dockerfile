@@ -2,7 +2,7 @@ FROM ubuntu:latest
 LABEL maintainer="Kukielka <Kukielka58@gmail.com>"
 
 RUN apt-get update && \
-	apt-get install -y curl build-essential git sudo
+	apt-get install -y curl build-essential git sudo screen
 
 RUN cd /tmp && \
 	curl https://sh.rustup.rs --output rustup.sh && \
