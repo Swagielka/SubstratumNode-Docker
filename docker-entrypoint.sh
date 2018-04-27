@@ -1,4 +1,5 @@
 #!/bin/bash
+cp /tmp/resolv.conf /etc/resolv.conf
 source $HOME/.cargo/env
 cd /git
 git clone https://github.com/SubstratumNetwork/SubstratumNode.git
