@@ -20,4 +20,6 @@ RUN chmod a+x /docker-entrypoint.sh
 ENV SUDO_UID=1000
 ENV SUDO_GID=1000
 
+EXPOSE 53
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
